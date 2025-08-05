@@ -22,7 +22,7 @@ jobs:
     - name: Install Python dependencies
       run: |
         cd backend
-        pip install fastapi uvicorn pytest httpx
+        pip install -r requirements.txt
 
     - name: Run backend tests
       run: |
@@ -34,18 +34,17 @@ jobs:
       with:
         node-version: '18'
 
-    - name: Install frontend dependencies and run tests
+    - name: Install frontend dependencies
       run: |
         cd frontend
         npm install
-        echo "Skipping frontend tests for now"
 
-    - name: Docker Build (Backend)
+    - name: Build Docker images (backend)
       run: |
         cd backend
         docker build -t backend-app .
 
-    - name: Docker Build (Frontend)
+    - name: Build Docker images (frontend)
       run: |
         cd frontend
         docker build -t frontend-app .
