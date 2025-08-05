@@ -1,0 +1,1 @@
+# DevOps Assignment\n\n## Project Structure\n- `backend/`: Python FastAPI app\n- `frontend/`: Next.js app\n\n## Setup Instructions\n- Run backend: `uvicorn main:app --reload`\n- Run frontend: `npm run dev`\n\n## Branching Strategy\n- `main`: Production\n- `develop`: Development\n- `feature/*`: Feature branches
